@@ -85,11 +85,13 @@ namespace UnitTestProject1
             var category_201 = _categoryTree.FindByID(201);
             Assert.IsNotNull(category_201);
             Assert.AreEqual(category_201.Data.ID, 201);
+            Assert.AreEqual(category_201.Data.ParentCategoryID, 200);
             Assert.AreEqual(category_201.Data.Keywords, "Teaching");
 
             var category_202 = _categoryTree.FindByID(202);
             Assert.IsNotNull(category_202);
             Assert.AreEqual(category_202.Data.ID, 202);
+            Assert.AreEqual(category_202.Data.ParentCategoryID, 201);
             Assert.AreEqual(category_202.Data.Keywords, "Teaching");
         }
         [TestMethod]

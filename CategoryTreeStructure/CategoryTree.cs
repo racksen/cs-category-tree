@@ -24,6 +24,7 @@ namespace CategoryTreeStructure
                 {
                     retObj = current;
                     retObj.Data.Keywords = GetKeywords(current);
+                    retObj.Data.ParentCategoryID= current.Parent.Data.ID;
                     break;
                 }
                 foreach (CategoryNode children in current.Children)
